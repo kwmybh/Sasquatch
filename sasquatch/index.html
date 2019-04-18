@@ -60,17 +60,17 @@
 
 
   <div id="ch1">
+    <div class="backgroundimg">
 
-    <div class="container-fluid">
       <!--div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
     </div-->
 
-      <div class="row no-gutters area2">
-        <div class="col-12">
+      <div class="row no-gutters">
+        <div class="col-12 title">
 
           <!--&autopause=0-->
-          <div class="vimeo-wrapper">
+          <div id="title-vid">
             <iframe src="https://player.vimeo.com/video/328642009?background=1&autoplay=1&loop=1&byline=0&title=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </div>
 
@@ -85,8 +85,7 @@
 
         </div>
       </div>
-    </div>
-
+</div>
     <!-- Start Chapter 1 Centered Block Text -->
     <div class="container-fluid">
       <div class="row no-gutters area1">
@@ -95,8 +94,6 @@
         <div class="col-8">
           <div class="center-text area1-content">
             <!--h1 class="text-center">the BACKGROUND<br>&#8212;</h1-->
-
-
             <p class="text-left"><span id="drop-cap">A</span>t night, in the valley in Guernsey County, Ohio, Bea Mills took a thermal imaging scope and pointed it toward the pond. Through the scope, she saw two heat-map outlines that were
               obviously deer bending down to drink from the water. She asked the other searcher, “What’s that third thing?” The third thing, a blob, had stood up and started walking away.
               <br><br>
@@ -430,8 +427,7 @@
         <div class="col-12">
           <div class="center-text area2-content">
             <!--h1 class="text-center">Bea Mills Interview<br>&#8212;</h1-->
-            <div class="jumbotron text-center my-5" data-paroller-factor="0.1" data-paroller-type="foreground" data-paroller-direction="vertical" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/328882705?color=253440&title=0&byline=0&portrait=0"
-                style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+            <div class="jumbotron text-center my-5" data-paroller-factor="0.1" data-paroller-type="foreground" data-paroller-direction="vertical" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/331118056?color=253440&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
             <script>
               src = "https://player.vimeo.com/api/player.js" >
             </script>
@@ -458,10 +454,13 @@
 
     <!--Start BEAR Map here-->
     <div class="container-fluid" id="bear">
-      <div class="row no-gutters area3">
+      <div class="row no-gutters area2">
         <div class="col-12">
-          <div class="map center-text area3-content">
+          <div class="map center-text area2-content">
             <h1 class="text-center">Bear Sightings</h1>
+            <div class="col-2">
+          </div>
+
             <p>Black bears, a species known to be native to Ohio, loom a terrifying seven feet tall when standing on their hind legs. Skeptics think that witnesses may be mistaking a bear sighting for a Sasquatch sighting. Click on the icons to
               compare black bear sightings and Sasquatch sightings in Ohio.</p>
 
@@ -496,31 +495,6 @@
     <!--Map ends-->
 
 
-    <!--Start Bear Map here---->
-    <div id="bearmap">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="col-md-12 pad myth-color">
-            <h2 class="text-center">Bears vs. Sasquatch</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row bearmap-row">
-        <div class="col-md-5 mx-auto"><img id="bearSquatch" src="img/ohio-full-map.png" class="img-fluid"></div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row bearmap-row">
-        <div class="col mx-auto bearmap-col">
-          <button id="bear-map" onclick="document.getElementById('bearSquatch').src='img/ohio-bear-map.png'">Black Bear Sitings</button>
-          <button id="both-map" onclick="document.getElementById('bearSquatch').src='img/ohio-full-map.png'">Both</button>
-          <button id="squatch-map" onclick="document.getElementById('bearSquatch').src='img/ohio-squatch-map.png'">Sasquatch Sitings</button>
-
-</div>
-</div>
-</div>
 
           <!--Fullscreen Quote-->
           <div class="container-fluid" data-paroller-factor="0.1" data-paroller-type="background" data-paroller-direction="vertical">
@@ -993,7 +967,9 @@
       <!--START CAROUSEL-->
       <div class="container-fluid" data-bottom-top="opacity:0;" data-bottom="opacity:1;" data-top="opacity:1;" data-top-bottom="opacity:0">
         <div class="row no-gutters">
-          <div class="col-12">
+          <div class="col-2">
+          </div>
+          <div class="col-8">
             <div class="carousel">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
@@ -1006,7 +982,7 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <figure class="cap-bot">
-                      <img class="d-block w-100" src="img/placeholder_01.jpg" alt="First slide">
+                      <img class="d-block w-100" src="img/pop-culture-01.jpg" alt="First slide">
                       <figcaption>
                         <p>Lorem Ispum.</p>
                       </figcaption>
@@ -1016,7 +992,7 @@
 
                   <div class="carousel-item">
                     <figure class="cap-bot">
-                      <img class="d-block w-100" src="img/placeholder_01.jpg" alt="Second slide">
+                      <img class="d-block w-100" src="img/pop-culture-02.jpg" alt="Second slide">
                       <figcaption>
                         <p>Lorem Ispum.</p>
                       </figcaption>
@@ -1025,7 +1001,7 @@
 
                   <div class="carousel-item">
                     <figure class="cap-bot">
-                      <img class="d-block w-100" src="img/placeholder_01.jpg" alt="Third slide">
+                      <img class="d-block w-100" src="img/pop-culture-03.jpg" alt="Third slide">
                       <figcaption>
                         <p>Lorem Ispum.</p>
                       </figcaption>
@@ -1035,7 +1011,7 @@
 
                   <div class="carousel-item">
                     <figure class="cap-bot">
-                      <img class="d-block w-100" src="img/placeholder_01.jpg" alt="Fourth slide">
+                      <img class="d-block w-100" src="img/pop-culture-04.jpg" alt="Fourth slide">
                       <figcaption>
                         <p>Lorem Ispum.</p>
                       </figcaption>
@@ -1043,7 +1019,25 @@
                   </div>
                   <div class="carousel-item">
                     <figure class="cap-bot">
-                      <img class="d-block w-100" src="img/placeholder_01.jpg" alt="Fifth slide">
+                      <img class="d-block w-100" src="img/pop-culture-05.jpg" alt="Fifth slide">
+                      <figcaption>
+                        <p>Lorem Ispum.</p>
+                      </figcaption>
+                    </figure>
+
+                  </div>
+                  <div class="carousel-item">
+                    <figure class="cap-bot">
+                      <img class="d-block w-100" src="img/pop-culture-06.jpg" alt="Sixth slide">
+                      <figcaption>
+                        <p>Lorem Ispum.</p>
+                      </figcaption>
+                    </figure>
+
+                  </div>
+                  <div class="carousel-item">
+                    <figure class="cap-bot">
+                      <img class="d-block w-100" src="img/pop-culture-07.jpg" alt="Seventh slide">
                       <figcaption>
                         <p>Lorem Ispum.</p>
                       </figcaption>
@@ -1061,6 +1055,8 @@
                 </a>
               </div>
             </div>
+          </div>
+          <div class="col-2">
           </div>
         </div>
       </div>

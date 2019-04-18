@@ -1,13 +1,14 @@
 /*css utilized in entire site*/
-/*body {
+body {
   position: relative;
-  background-color: #253440;
+  /*background-color: red;*/
   /*background-color:red;*/
+
 }
 
-*/ .backgroundimg {
-  /*background: url(../img/Texture-01.png);
-  background-color:#253440;*/
+ .backgroundimg {
+  background: url(../img/Textures-01.png);
+  background-color:#253440;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -44,42 +45,46 @@ map {
 /*Channel Colors*/
 #ch1 {
   background: url(../img/Textures-01.png);
-  background-color: #28353F;
+  background-color: #253440;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
+  overflow: hidden;
 }
 
 #ch2 {
   background: url(../img/Textures-02.png);
-  background-color: #3B5262;
+  background-color: #FFFFFF;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
   background-attachment: fixed;
+    overflow: hidden;
 }
 
 #ch3 {
   background: url(../img/Textures-03.png);
-  background-color: #384149;
+  background-color: #2E353C;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
   background-attachment: fixed;
+    overflow: hidden;
 }
 
 #ch4 {
   background: url(../img/Textures-04.png);
-  background-color: #877562;
+  background-color: #877B6B;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
   background-attachment: fixed;
+    overflow: hidden;
 }
 
 .container-fluid {
@@ -225,42 +230,35 @@ li a:active .dot,
   padding-bottom: 20px;
 }
 
-/*Start video background full screen with project title*/
-#title-vid {
-  position: relative;
-  padding-bottom: 56.75%;
-  padding-top: -10;
-  overflow: hidden;
-  z-index: -10000;
-}
-
-#animation {
-  position: relative;
-  padding-bottom: 56.75%;
-  padding-top: 0;
-  overflow: hidden;
-}
-
-#title-vid iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -100000;
-}
-
-#title-vid video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -100000;
-}
 
 /**/
 /*Start video background full screen with project title*/
+
+.title{
+  height: 100vh;
+}
+
+#title-vid {
+
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#title-vid iframe {
+  position: fixed;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
 .vimeo-wrapper {
   /*position: fixed;*/
   top: 0;
@@ -685,7 +683,7 @@ video {
 
 /*START CAROUSEL STYLE*/
 .carousel {
-  weight: 60%;
+  width: 100%;
 }
 
 .carousel-indicators li {
