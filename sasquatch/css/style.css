@@ -6,41 +6,6 @@ body {
 
 }
 
- .backgroundimg {
-  background: url(../img/Textures-01.png);
-  background-color:#253440;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  /*height: 100vh;*/
-  /*width: 100%;*/
-}
-
-.backgroundimg2 {
-  /*background: url(../img/map-bg.png);
-  background-color: rgb(255,255,255);*/
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  /*height: 100vh;*/
-  /*  width: 100%;*/
-}
-
-map {
-  background-color: red;
-}
-
-.backgroundimg3 {
-  /*background: url(../img/map-bg.png);*/
-  background-color: #877B6B;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  /*  width: 100%;*/
-}
-
-
 
 /*Channel Colors*/
 #ch1 {
@@ -63,6 +28,7 @@ map {
   width: 100%;
   background-attachment: fixed;
     overflow: hidden;
+    z-index: 1000000;
 }
 
 #ch3 {
@@ -90,25 +56,22 @@ map {
 .container-fluid {
   padding-right: 0;
   padding-left: 0;
-  padding-top: 15px;
+  padding-top: 0;
   padding-bottom: 15px;
   z-index: 1;
 }
 
 /*Styles for SCREEN HEIGHT COLS*/
 .area1 {
-  /*background-color: red;*/
-  /*height: 100vh;*/
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*.area1-content .area2-content {
-  background-color: aqua;
-}*/
+
 .area2 {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +79,7 @@ map {
 
 .area3 {
   /*background-color: red;*/
-  height: 100vh;
+  /*height: 100vh;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,6 +116,10 @@ ul {
 li a {
   margin-top: 10px;
   display: block;
+}
+
+a {
+  color: #cf9747;
 }
 
 li .dot {
@@ -207,29 +174,53 @@ li a:active .dot,
   height: 500px;
 }
 
-.center-quote {
-  position: relative;
-  top: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.center-quote h1 {
-  position: relative;
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 25pt;
-  text-align: center;
-  color: #FFF;
-  top: 50%;
-}
 
 .text-center {
   font-family: 'Crimson Text', serif;
   padding-bottom: 20px;
 }
 
+
+/* Start Pull Quote Over Full Screen Image*/
+
+
+.pull-quote {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+.pull-quote h1 {
+  position: relative;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.dark .pull-quote {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+.dark .pull-quote h1 {
+  position: relative;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2rem;
+  text-align: center;
+  color: #28353F;
+
+}
 
 /**/
 /*Start video background full screen with project title*/
@@ -239,10 +230,11 @@ li a:active .dot,
 }
 
 #title-vid {
-
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
+    position: relative;
+    padding-bottom: 56.75%;
+    padding-top: 0;
+    overflow: hidden;
+    z-index: 10000;
 }
 
 #title-vid iframe {
@@ -258,6 +250,19 @@ li a:active .dot,
   object-fit: cover;
   overflow: hidden;
 }
+
+
+#title-vid video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100000;
+
+}
+
+
 
 .vimeo-wrapper {
   /*position: fixed;*/
@@ -287,9 +292,15 @@ li a:active .dot,
 h1, h2, h3, h4, i {
   color: white;
 }
-i{
+
+.dark h1, h2, h3, h4, i {
+  color: #28353F;
+}
+
+
+.italic i{
   font-family: 'Crimson Text', serif;
-  font-weight: bold;
+  font-size: 1.2rem;
   font-style: italic;
 }
 .headline {
@@ -307,22 +318,21 @@ i{
   text-indent: 0.2em;
   color: white;
 }
+.headline h1 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+  text-indent: 0.2em;
+  color: white;
+}
 
 .headline h2 {
   font-family: 'Crimson Text', serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.6rem;
   text-align: center;
-  color: white;
-}
-
-.headline h3 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: 4pt;
-  text-indent: -1em;
-  text-align: center;
+  text-indent: 0.2em;
   color: white;
 }
 
@@ -378,17 +388,6 @@ i{
   margin-right: auto;
 }
 
-.ch-title h3 {
-  font-family: 'Lora', serif;
-  font-weight: 600;
-  font-size: 2vw;
-  letter-spacing: 6pt;
-  text-align: center;
-  color: white;
-  text-shadow: 0 2px 2px #000000;
-  padding-top: 10px;
-}
-
 .ch-title h1 {
   font-family: 'Lora', serif;
   font-weight: 600;
@@ -398,13 +397,6 @@ i{
   text-shadow: 0 2px 2px #000000;
 }
 
-.ch-title p {
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  color: white;
-  font-size: 12pt;
-  text-align: center;
-}
 
 .title-audio {
   padding-bottom: 10px;
@@ -414,79 +406,11 @@ i{
   z-index: -10000;
 }
 
-/*Start Background with Caption and Audio*/
-.audio-title {
-  position: absolute;
-  width: 100%;
-  z-index: 1000;
-  bottom: 0;
-}
 
-.audio-title-bg {
-  background-color: rgba(99, 110, 114, 0.8);
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.audio-title-text p {
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  font-size: 12pt;
-  margin-left: 5px;
-  color: white;
-  padding-top: 5px;
-  padding-left: 30px;
-}
-
-/* Start Pull Quote Over Full Screen Image*/
-.pull-quote {
-  padding-right: 10%;
-  padding-left: 20%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-.pull-quote img {}
-
-.pull-quote h3 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-size: 2vw;
-  color: black;
-  z-index: -1000;
-}
-
-.pull-quote h4 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  font-size: 1.8vw;
-  color: black;
-  z-index: -1000;
-}
-
-.pull-quote p {
-  padding-top: 20px;
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  font-size: 12pt;
-  color: #b5b577;
-}
-
-.angel {
-  margin-top: 5%;
-}
-
-.mediPlayer {
-  z-index: 10000;
-}
 
 /* Start Chapter 1 Centered Block Text*/
 .center-text {
-  padding-top: 50px;
-  padding-bottom: 25px;
+  padding-top: 10%;
   margin-right: 17%;
   margin-left: 17%;
 }
@@ -494,9 +418,16 @@ i{
 .center-text p {
   font-family: 'Crimson Text', serif;
   font-weight: 400;
-  font-size: 1.5vw;
+  font-size: 1.4rem;
   color: #fff;
 }
+.dark .center-text p {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #28353F;
+}
+
 
 .center-text #drop-cap {
   font-family: 'Crimson Text', serif;
@@ -507,42 +438,15 @@ i{
   line-height: 80%;
 }
 
-/* START VERTICAL IMAGE AND TEXT STYLE*/
-.vert-img {
-  padding-left: 10%;
-}
-
-.vert-img-text {
-  padding-left: 5%;
-  padding-right: 15%;
-  padding-bottom: 20%;
-  padding-top: 20%;
-}
-
-.vert-img-cap p {
-  padding-left: 10%;
+.dark .center-text #drop-cap {
   font-family: 'Crimson Text', serif;
-  font-weight: 300;
-  font-size: 1.2vw;
-}
-
-.vert-img-text #drop-cap {
-  font-family: 'Crimson Text', serif;
+  color: #28353F;
   font-weight: 400;
-  font-size: 9vw;
+  font-size: 8vw;
   float: left;
   line-height: 80%;
 }
 
-.img-fluid2 {
-  padding-left: 50px;
-  height: 100vh;
-}
-
-.img-fluid3 {
-  padding-left: 50px;
-  height: 100vh;
-}
 
 #drop-cap {
   font-family: 'Crimson Text', serif;
@@ -552,133 +456,12 @@ i{
   line-height: 80%;
 }
 
-.vert-img-text p {
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-size: 1.75vw;
-}
 
-/*2 STYLES START BLOCK TEXT PARALLAX STYLE 2 STYLES*/
-/*START BLOCK TEXT PARALLAX STYLE*/
-.block-text {
-  position: absolute;
-  top: 60%;
-  width: 100%;
-  z-index: 1000;
-}
-
-.block-text-bg {
-  background-color: rgba(99, 110, 114, 0.7);
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.block-text #drop-cap {
-  color: white;
-  font-size: 8vw;
-  padding-left: 3%;
-}
-
-.block-text p {
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-size: 1.50vw;
-  color: white;
-  padding-bottom: 3%;
-  padding-top: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
-}
-
-/*START BLOCK TEXT PARALLAX STYLE 2*/
-.block-text2 {
-  position: absolute;
-  top: 60%;
-  width: 100%;
-  z-index: 1000;
-}
-
-.block-text-bg2 {
-  background-color: rgba(99, 110, 114, 0.7);
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.block-text2 #drop-cap {
-  color: white;
-  font-size: 9vw;
-  padding-left: 3%;
-}
-
-.block-text2 p {
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-size: 1.75vw;
-  color: white;
-  padding-bottom: 3%;
-  padding-top: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
-}
-
-.infographic {
-  padding-top: 30px;
-}
-
-.ch2-top-img {
-  width: 100%;
-  padding-top: 5%;
-}
-
-.ch2-top-img img {
-  width: 100%;
-}
-
-.center-text-wrapper {
-  width: 100%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.center-text-wrapper h1 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  font-size: 2vw;
-}
-
-.center-text-wrapper p {
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-size: 1.5vw;
-}
-
-/*Chapter 3 Title Quote*/
-.center-quote h4 {
-  padding-top: 25px;
-  font-family: 'Crimson Text', serif;
-  font-weight: 400;
-  font-size: 1.5vw;
-  color: white;
-  text-align: center;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /*fullscreen vid*/
 .full-screen-vid {
   position: relative;
   width: 100%;
-}
-
-iframe {
-  width: 75%;
-}
-
-video {
-  width: 75%;
 }
 
 /*START CAROUSEL STYLE*/
@@ -704,7 +487,7 @@ video {
   width: 50px;
 }
 
-.d-flex {
+  .d-flex {
   /*background-color: red;*/
 }
 
@@ -737,14 +520,6 @@ footer {
 
 .name-line {}
 
-.center-footer h3 {
-  position: relative;
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  font-size: 13px;
-  padding-top: 2px;
-  color: white;
-}
 
 .center-footer p {
   position: relative;
@@ -752,6 +527,15 @@ footer {
   font-weight: 400;
   font-size: 13px;
   padding-left: 5px;
+}
+
+.center-footer h3 {
+  position: relative;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding-top: 2px;
+  color: white;
 }
 
 .right-footer p {
@@ -824,11 +608,6 @@ figure:hover figcaption {
     top: 45%;
   }
 
-  .headline h3 {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-indent: 0;
-  }
 
   .headline h1 {
     font-size: 50px;
@@ -836,26 +615,9 @@ figure:hover figcaption {
     text-indent: .2px;
   }
 
-  .headline h2 {
-    font-size: 11.5px;
-  }
-
-  .center-quote {
-    top: 30%;
-  }
-
-  .center-quote h1 {
-    font-size: 15pt;
-  }
 
   .ch-title {
     top: 50%;
-  }
-
-  .ch-title h3 {
-    letter-spacing: 3px;
-    font-size: 10px;
-    padding-top: 5px;
   }
 
   .ch-title h1 {
@@ -868,69 +630,19 @@ figure:hover figcaption {
     margin-top: -5px;
   }
 
-  .title-audio .mediPlayer {
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 5px;
-    margin-top: -5px;
-  }
-
-  .mediPlayer {
-    height: 40px;
-    width: 40px;
-    background-color: #b5b577;
-    border-radius: 50%;
-  }
-
   .center-text {
     margin-right: 12%;
     margin-left: 12%;
   }
 
   .center-text p {
-    font-size: 14px;
+    font-size: 1.2rem;
     color: white;
   }
 
-  #drop-cap {}
-
-  .pull-quote {
-    margin-top: 5%;
-  }
-
-  .pull-quote h3 {
-    font-size: 15px;
-    padding-top: 10px;
-  }
-
-  .pull-quote h4 {
-    font-size: 15px;
-    margin-top: -5%;
-  }
-
-  .pull-quote p {
-    font-size: 12px;
-    margin-top: -10px;
-  }
-
-  .audio-length {
-    padding-bottom: 20px;
-  }
-
-  .vert-img-cap img {
-    padding-top: 30px;
-  }
-
-  .vert-img-cap p {
-    font-size: 12px;
-  }
-
-  .vert-img-text {
-    margin-left: 12%;
-  }
-
-  .vert-img-text p {
-    font-size: 14px;
+.dark .center-text p {
+    font-size: 1.2rem;
+    color: #28353F;
   }
 
   .block-text p {
@@ -943,14 +655,6 @@ figure:hover figcaption {
 
   .second {
     top: 20%;
-  }
-
-  .center-text-wrapper h1 {
-    font-size: 14px;
-  }
-
-  .center-text-wrapper p {
-    font-size: 10px;
   }
 
   figcaption {
